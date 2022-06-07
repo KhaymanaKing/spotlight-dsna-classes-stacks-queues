@@ -7,12 +7,10 @@ class Stack {
     this.#list.push(item);
   }
   pop() {
-    const last = this.#list.slice(-1);
-    this.#list.pop();
-    return last[0];
+    return this.#list.pop()
   }
   peek() {
-    return this.#list.slice(-1)[0];
+    return this.#list[this.#list.length -1];
   }
 }
 
@@ -35,12 +33,13 @@ class Queue {
     if (initialList) this.#list = initialList;
   }
   enqueue(item) {
-    this.#list.push(item);
-    // return this.#list.toString();
+    return this.#list.push(item);
   }
   dequeue() {
-    const first = this.#list.slice[0];
-    return first;
+    return this.#list.shift();
+  }
+  get hasNext() {
+      return this.#list.length > 0;
   }
 }
 const queue = new Queue();
