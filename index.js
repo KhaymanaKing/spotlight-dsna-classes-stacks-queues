@@ -9,10 +9,10 @@ class Stack {
     pop(){
         const last = this.#list.slice(-1);
         this.#list.pop();
-        return last;
+        return last[0];
     }
     peek(){
-        return this.#list.slice(-1)
+        return this.#list.slice(-1)[0];
     }
 }
 
@@ -28,6 +28,7 @@ console.log(stack.pop()); // 'llama'
 console.log(stack.peek()); // 'fox'
 console.log(stack.pop()); // 'fox'
 console.log(stack.pop()); // null
+
 class Queue {}
 
 module.exports = { Stack, Queue };
