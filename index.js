@@ -12,6 +12,13 @@ class Stack {
   peek() {
     return this.#list[this.#list.length -1];
   }
+  reverse(){
+      let output =[];
+      for(let i = 0; i < this.#list.length; i++){
+          output.push(this.#list.length -i)
+      }
+      return output;
+  }
 }
 
 // const stack = new Stack();
